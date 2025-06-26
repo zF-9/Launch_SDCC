@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     //hand-print click 
     document.addEventListener("click", function(e) {
+        console.log("hahaha")
         startScan();
     });
     
