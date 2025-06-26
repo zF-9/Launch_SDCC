@@ -30,14 +30,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     //hand-print touch 
-    document.addEventListener("touchstart", function(e) {
+    window.addEventListener("touchstart", function(e) {
         console.log("hahaha")
         e.preventDefault();
         startScan();
     });
 
     //hand-print click 
-    document.addEventListener("click", function(e) {
+    window.addEventListener("click", function(e) {
         console.log("hahaha")
         e.preventDefault();
         startScan();
