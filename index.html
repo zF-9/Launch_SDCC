@@ -16,7 +16,7 @@
         <div class="status-text" id="statusText">simpan tangan kau di sini bah!</div>
         
         <div class="hand-container" id="handContainer">
-            <video onlickclass="hand-video" id="handVideo" loop muted>
+            <video onlickclass="hand-video" id="handVideo" loop muted style="width: 50%;">
                 <source src="./hand-1.mp4" type="video/mp4">
             </video>
             <div class="scan-grid"></div>
@@ -37,6 +37,44 @@
     <audio id="successSound" src="https://assets.mixkit.co/sfx/preview/mixkit-achievement-bell-600.mp3" preload="auto"></audio>
 
     <script src="./script.js"></script>
+    <script>
+    /* Get the element you want displayed in fullscreen mode (a video in this example): */
+
+    document.addEventListener('keyup', function(e) {
+        e.preventDefault();     
+        if(e.code === 'Enter') {
+            toggleFullScreen()
+            // if(document.fullscreenElement) {
+            //     console.log('cancel')
+            //     document.getElementsByTagName('html').requestFullscreen();  
+                
+            //     // document.getElementsByTagName('html').mozCancelFullScreen();
+            //     // document.getElementsByTagName('html').webkitCancelFullScreen();
+            // } else {
+            //     console.log('go full')
+            //     document.getElementsByTagName('html').exitFullscreen();
+            //     document.getElementsByTagName('html').requestFullscreen();  
+            // }
+        }
+    })
+
+    function toggleFullScreen() {
+   var doc = window.document;
+   var docEl = doc.documentElement;
+
+   var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+   var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+
+   if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
+       requestFullScreen.call(docEl);
+   }
+   else {
+       cancelFullScreen.call(doc);
+   }
+}
+
+    </script>
+
 
 </body>
 </html>

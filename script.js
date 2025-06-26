@@ -31,16 +31,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     //hand-print touch 
     window.addEventListener("touchstart", function(e) {
-        console.log("hahaha")
-        e.preventDefault();
-        startScan();
+        if (!isScanning) {
+            console.log("hahaha")
+            e.preventDefault();
+            startScan();
+        }
     });
 
     //hand-print click 
     window.addEventListener("click", function(e) {
-        console.log("hahaha")
-        e.preventDefault();
-        startScan();
+        if (!isScanning) {
+            console.log("hahaha")
+            e.preventDefault();
+            startScan();
+        }
     });
     
     
@@ -62,6 +66,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Start scanning animations
         startScanLineAnimation();
         startRandomScanPoints();
+
+        //remove ecent listerner 
     }
     
     function updateScanProgress() {
@@ -116,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function completeScan() {
         clearInterval(scanInterval);
-        isScanning = false;
+        //isScanning = false;
         handContainer.classList.remove('scanning');
         statusText.classList.remove('pulse');
         statusText.textContent = "Scan complete!";
