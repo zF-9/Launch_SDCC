@@ -84,13 +84,11 @@ body {
     mix-blend-mode: screen;
     opacity: 0;
     transition: opacity 0.5s ease;
-    z-index: 1000;
     /*transform:rotateY(180deg);*/
 }
 
 .hand-video.visible {
     opacity: 1;
-    z-index: 1000;
 }
 
 .scan-line {
