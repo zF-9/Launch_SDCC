@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     //hand-print touch 
-    window.addEventListener("touchstart", function(e) {
+    /*window.addEventListener("touchstart", function(e) {
         if (!isScanning) {
             console.log("hahaha")
             e.preventDefault();
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             startScan();
         }
-    });
+    });*/
     
     
     function startScan() {
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
         scanProgress += 2;
         progressBar.style.width = scanProgress + '%';
         
-        if (scanProgress >= 100) {
+        if (scanProgress >= 103) {
             completeScan();
         }
     }
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
         successSound.play().catch(e => console.log("Sound play error:", e));
         
         // Change background video
-        backgroundVideo.src = "https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-a-futuristic-circuit-board-12908-large.mp4";
+        backgroundVideo.src = "background-2.mp4";
         backgroundVideo.load();
         backgroundVideo.play().catch(e => console.log("Background video error:", e));
         
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
         resultVideo.play().catch(e => console.log("Result video play error:", e));
         
         // Reset after showing results
-        setTimeout(resetApp, 5000);
+        //setTimeout(resetApp, 5000);
     }
     
     function resetApp() {
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
         resultVideo.pause();
         resultVideo.currentTime = 0;
         
-        backgroundVideo.src = "https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-a-futuristic-circuit-12906-large.mp4";
+        backgroundVideo.src = "background-1.mp4";
         backgroundVideo.load();
         backgroundVideo.play().catch(e => console.log("Background video error:", e));
         
