@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biometric Hand Scanner</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <video class="background-video" id="backgroundVideo" loop muted autoplay>
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-a-futuristic-circuit-12906-large.mp4  " type="video/mp4">
+    </video>
+
+    <div class="app-container">
+        <h1 class="title">simpan tangan kau di sini bah!</h1>
+        <div class="status-text" id="statusText">simpan tangan kau di sini bah!</div>
+        
+        <div class="hand-container" id="handContainer">
+            <video class="hand-video" id="handVideo" loop muted>
+                <source src="./hand-1.mp4" type="video/mp4">
+            </video>
+            <div class="scan-grid"></div>
+            <div class="scan-line" id="scanLine"></div>
+            <div class="scan-point" id="scanPoint"></div>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress" id="progressBar"></div>
+        </div>
+    </div>
+
+    <video class="result-video" id="resultVideo" loop muted>
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-a-futuristic-scan-12907-large.mp4" type="video/mp4">
+    </video>
+
+    <audio id="scanSound" src="https://assets.mixkit.co/sfx/preview/mixkit-sci-fi-positive-interface-902.mp3" preload="auto"></audio>
+    <audio id="successSound" src="https://assets.mixkit.co/sfx/preview/mixkit-achievement-bell-600.mp3" preload="auto"></audio>
+
+    <script src="./script.js"></script>
+</body>
+</html>
