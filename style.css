@@ -84,7 +84,8 @@ body {
     mix-blend-mode: screen;
     opacity: 0;
     transition: opacity 0.5s ease;
-    transform:rotateY(180deg);
+    z-index: 100;
+    /*transform:rotateY(180deg);*/
 }
 
 .hand-video.visible {
