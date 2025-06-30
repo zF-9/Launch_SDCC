@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         handVideo.classList.add('visible');
         handVideo.play().catch(e => console.log("Video play error:", e));
-        // statusText.textContent = "Press SPACE to begin scan";
+        statusText.textContent = "SCAN HERE";
     }, 1000);
     
     // Spacebar event listener
