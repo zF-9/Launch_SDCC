@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function() {
         backgroundVideo.load();
         backgroundVideo.play().catch(e => console.log("Background video error:", e));
         
-        statusText.textContent = "Press SPACE to begin new scan";
+        statusText.textContent = "SCAN HERE";
         progressBar.style.width = '0';
         
         // Reset scan line
