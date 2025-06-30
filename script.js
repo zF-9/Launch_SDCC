@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         handVideo.classList.add('visible');
         handVideo.play().catch(e => console.log("Video play error:", e));
-        statusText.textContent = "Press SPACE to begin scan";
+        // statusText.textContent = "Press SPACE to begin scan";
     }, 1000);
     
     // Spacebar event listener
@@ -126,6 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
         handContainer.classList.remove('scanning');
         statusText.classList.remove('pulse');
         statusText.textContent = "Scan complete!";
+        document.getElementsByClassName('title').textContent = "";
         
         // Play success sound
         successSound.play().catch(e => console.log("Sound play error:", e));
